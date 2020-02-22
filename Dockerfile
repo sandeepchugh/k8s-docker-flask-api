@@ -1,7 +1,7 @@
 FROM python:3.8-buster
-COPY ./requirement.txt /app/requirement.txt
+COPY requirements.txt /app/requirements.txt
 WORKDIR /app
-RUN pip install -r requirement.txt
+RUN pip install -r requirements.txt
 COPY . /app
 ENTRYPOINT ["python"]
 CMD ["app.py"]
